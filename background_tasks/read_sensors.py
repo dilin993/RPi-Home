@@ -14,7 +14,8 @@ def main():
     sensor = Factory.getTemper("NTC-ADC", pin)
     
     while True:
-        red.mset({'temperature': sensor.temperature})
+        temp = float(sensor.temperature)
+        red.mset({'temperature': round(temp)})
         time.sleep(INTERVAL)
 
 
