@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RPi Home</title>
     <link rel="stylesheet" href="../static/css/base.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {% block head %}{% endblock %}
 </head>
 <body>
 
@@ -15,8 +17,8 @@
     </div>
 </div>
 
-<div style="padding-left:20px">
-
+<div id="content" class="container main-container">
+    {% block content %}{% endblock %}
 </div>
 
 <div class="footer">

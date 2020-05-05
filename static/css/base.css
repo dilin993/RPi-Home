@@ -72,3 +72,8 @@ body {
     background-color: black;
     color: white;
 }
+
+.section temp_display {
+  float: left;
+  font-size: large;
+}

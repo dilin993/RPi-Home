@@ -1,0 +1,10 @@
+.temp_display {
+    font-size: 36px;
+    color: rgb(255, 123, 0);
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+#temperature_title, #temperature_value, #celcius {
+    display: inline;
+  }
