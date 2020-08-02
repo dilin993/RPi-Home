@@ -1,11 +1,20 @@
 #!/bin/bash
 
-if [[ ! -e /tmp/read_sensors.py.pid ]]; then   # Check if the file already exists
-    python background_tasks/read_sensors.py 0 &   #+and if so do not run another process.
-    echo $! > /tmp/read_sensors.py.pid
+if [[ ! -e /tmp/read_temp_sensor.py.pid ]]; then   # Check if the file already exists
+    python background_tasks/read_temp_sensor.py 0 &   #+and if so do not run another process.
+    echo $! > /tmp/read_temp_sensor.py.pid
 else
     echo -n "ERROR: The process is already running with pid "
-    cat /tmp/read_sensors.py.pid
+    cat /tmp/read_temp_sensor.py.pid
+    echo
+fi
+
+if [[ ! -e /tmp/read_ultrasonic_sensor.py.pid ]]; then   # Check if the file already exists
+    python background_tasks/read_ultrasonic_sensor.py 0 &   #+and if so do not run another process.
+    echo $! > /tmp/read_ultrasonic_sensor.py.pid
+else
+    echo -n "ERROR: The process is already running with pid "
+    cat /tmp/read_ultrasonic_sensor.py.pid
     echo
 fi
 

@@ -7,8 +7,37 @@
 
 {% block content %}
 <section class="temp_display">
-    <div id="temperature_title">Temperature: </div>
+    <div id="temperature_title">Temperature is </div>
     <div id="temperature_value"></div> 
     <div id="celcius">&#8451;</div>
 </section>
+
+<hr/>
+
+<section class="switch_panel">
+<div id="switch_panel_title">Switch Pannel</div>
+    <table>
+        {% for sw in switches%}
+            <tr>
+                <td>
+                    <div id="switch_title">Control switch {{sw}}: </div>
+                </td>
+                <td>
+                    <button id="switch{{sw}}" type="button" onclick="switchx({{sw}})">
+                        <div id="switch{{sw}}_text">Turn on</div>
+                    </button>
+                </td>
+            </tr>
+            
+        {% endfor %}
+    </table>
+</section>
+
+<hr/>
+
+<section class="presence_display">
+    <div id="presence_title">Active light is </div>
+    <div id="presence_value"></div> 
+</section>
+
 {% endblock %}

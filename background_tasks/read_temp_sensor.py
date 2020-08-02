@@ -2,13 +2,14 @@ import sys
 import time
 from grove.factory import Factory
 import redis
+import configparser
 
 INTERVAL=300  # 5 min
 
 def main():
-    from grove.helper import SlotHelper
-    sh = SlotHelper(SlotHelper.ADC)
-    pin = sh.argv2pin()
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    pin = int(config['DEFAULT']['temp_sensor_pin'])
     red = redis.Redis()
 
     sensor = Factory.getTemper("NTC-ADC", pin)

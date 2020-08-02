@@ -8,3 +8,37 @@
 #temperature_title, #temperature_value, #celcius {
     display: inline;
   }
+  
+.switch_panel {
+    font-size: 20px;
+    color: rgb(255, 123, 0);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#switch_panel_title {
+    font-size: 36px;
+}
+
+
+table, th, td {
+  border: 2px solid black;
+}
+
+button {
+    font-size: 20px;
+    color: rgb(255, 100, 0);
+    padding: 15px 32px;
+}
+
+.presence_display {
+    font-size: 36px;
+    color: rgb(255, 123, 0);
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  
+  #presence_title, #presence_value {
+    display: inline;
+  }
+  
